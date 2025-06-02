@@ -1,0 +1,30 @@
+# Deployment Configuration for intelligent-trading-bot
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: intelligent-trading-bot
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: intelligent-trading-bot
+  template:
+    metadata:
+      labels:
+        app: intelligent-trading-bot
+    spec:
+      containers:
+      - name: intelligent-trading-bot
+        image: intelligent-trading-bot:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NODE_ENV
+          value: "production"
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
