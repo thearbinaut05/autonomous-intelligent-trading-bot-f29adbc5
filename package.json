@@ -1,0 +1,27 @@
+{
+  "name": "intelligent-trading-bot",
+  "version": "1.0.0",
+  "description": "Algorithmic trading and market arbitrage automation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "deploy": "npm run build && npm run start"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "axios": "^1.4.0",
+    "ws": "^8.13.0",
+    "pg": "^8.11.0",
+    "mongodb": "^5.6.0"
+  },
+  "keywords": [
+    "autonomous",
+    "ai",
+    "revenue",
+    "automation"
+  ],
+  "license": "MIT"
+}
